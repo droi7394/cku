@@ -1,4 +1,4 @@
-int RightMotor_E_pin = 5;      // 오른쪽 모터의 Enable & PWM for test tttt  dddd
+int RightMotor_E_pin = 5;      // 오른쪽 모터의 Enable & PWM
 int RightMotor_1_pin = 8;      // 오른쪽 모터 제어선 IN1
 int RightMotor_2_pin = 9;     // 오른쪽 모터 제어선 IN2
 int LeftMotor_3_pin = 10;      // 왼쪽 모터 제어선 IN3
