@@ -7,7 +7,7 @@ int Smart_Door(int angles) {
     lcd.setCursor(0, 1);
     lcd.print("         = "); lcd.print(control_num); lcd.print("ms ");
 
-    if (control_num == 30) {                    // 문이 열리고 3초가 지나가는지 확인.
+    if (control_num == CONST_INTERVAL_TIME) {                    // 문이 열리고 3초가 지나가는지 확인.
       control_num = 0;                        // 명령 받기 전의 상태로 복귀
       angles = init_angle;                             // 서보모터 각도 초기화.
     }

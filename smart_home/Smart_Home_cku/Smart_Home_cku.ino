@@ -29,7 +29,8 @@ Servo servo;                                  // 서보 클래스 타입인 serv
 int servo_pin = 13;                           // 서보의 제어핀 13번 핀으로 선언
 int init_angle = 180;                         // 서보의 각도 초기값
 int angle = init_angle;                       // 서보의 각도를 저장하기 위한 변수
-int control_num = 0;                          // 도어락의 상태를 저장하기 위한 변수
+int control_num = 0;  
+int CONST_INTERVAL_TIME = 30; // 문이 열리고 인터벌 3초
 
 //****************** 침입자 감지 선언 ******************//
 int piezo = 7;                                // 피에조 부저를 7번 핀으로 선언
@@ -53,7 +54,8 @@ void setup() {
   pinMode(fan, OUTPUT);                       // fan 핀 모드를 출력으로 설정
 
   //********* 스마트 도어 Setup() *********//
-  servo.attach(servo_pin);                    // servo 객체를 초기화, 제어핀 선언
+  servo.attach(servo_pin);// servo 객체를 초기화, 제어핀 선언
+
 
   //********* 침입자 감지 Setup() *********//
   pinMode(piezo, OUTPUT);                     // 피에조 핀 출력으로 설정
